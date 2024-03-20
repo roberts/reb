@@ -46,6 +46,15 @@ abstract contract Context {
 abstract contract Ownable is Context {
     address private _owner;
 
+    string websiteLink = "https://github.com/roberts/reb";
+
+    /**
+     * @dev Updates the websiteLink string with a new value
+     */
+    function updateWebsiteLink(string calldata newLink) external onlyOwner {
+        websiteLink = newLink;
+    }
+
     event OwnershipTransferred(
         address indexed previousOwner,
         address indexed newOwner
