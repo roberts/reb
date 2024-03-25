@@ -118,7 +118,7 @@ contract JohnnyReb is Ownable {
     address payable public DrewRoberts =
         payable(0xC6aa2f0FF6b8563EA418ec2558890D6027413699);
     address payable public WebAppTeam =
-        payable(0xC6aa2f0FF6b8563EA418ec2558890D6027413699);
+        payable(0xBc46A0F68795c90ca2A77168169b806ca440Eb26);
 
     constructor() {}
 
