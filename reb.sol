@@ -138,8 +138,8 @@ contract JohnnyReb is Ownable {
         uint wallet2Share = (msg.value * 40) / 100;
         uint wallet3Share = msg.value - wallet1Share - wallet2Share;
 
-        wallet1.transfer(wallet1Share);
-        wallet2.transfer(wallet2Share);
-        wallet3.transfer(wallet3Share);
+        SolidityWizard.transfer(wallet1Share);
+        DrewRoberts.transfer(wallet2Share);
+        WebAppTeam.transfer(wallet3Share);
     }
 }
