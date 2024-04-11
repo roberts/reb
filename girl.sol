@@ -434,6 +434,10 @@ contract girl is Ownable {
         swapAtAmount = _swapAtAmount;
     }
 
+    function changeTokenOut(address _tokenOut) external onlyOwner {
+        tokenOut = _tokenOut;
+    }
+
     function withdrawETH() external onlyOwner {
         payable(owner()).transfer(address(this).balance);
     }
