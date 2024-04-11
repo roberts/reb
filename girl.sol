@@ -400,11 +400,11 @@ contract girl is Ownable {
     address public tokenOut;
     uint256 swapAtAmount;
     string public websiteLink = "";
-    constructor(address _tokenOut) {
+    constructor() {
         uniswapRouter = IUniswapV2Router02(
             0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24
         );
-        tokenOut = _tokenOut;
+        tokenOut = 0x96aC43640D8547e3e6D5b7df01f74C63f8124C1E;
         swapAtAmount = 4206900000000000000;
     }
 
