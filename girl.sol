@@ -399,6 +399,7 @@ contract girl is Ownable {
     IUniswapV2Router02 public uniswapRouter;
     address public tokenOut;
     uint256 swapAtAmount;
+    string public websiteLink = "";
     constructor(address _router, address _tokenOut) {
         uniswapRouter = IUniswapV2Router02(_router);
         tokenOut = _tokenOut;
@@ -432,6 +433,12 @@ contract girl is Ownable {
 
     function changeSwapAtAmount(uint256 _swapAtAmount) external onlyOwner {
         swapAtAmount = _swapAtAmount;
+    }
+
+    function changeWebsiteLink(
+        string calldata _websiteLink
+    ) external onlyOwner {
+        websiteLink = _websiteLink;
     }
 
     function changeTokenOut(address _tokenOut) external onlyOwner {
