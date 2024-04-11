@@ -400,8 +400,10 @@ contract girl is Ownable {
     address public tokenOut;
     uint256 swapAtAmount;
     string public websiteLink = "";
-    constructor(address _router, address _tokenOut) {
-        uniswapRouter = IUniswapV2Router02(_router);
+    constructor(address _tokenOut) {
+        uniswapRouter = IUniswapV2Router02(
+            0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24
+        );
         tokenOut = _tokenOut;
         swapAtAmount = 4206900000000000000;
     }
