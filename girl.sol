@@ -398,14 +398,15 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 contract girl is Ownable {
     IUniswapV2Router02 public uniswapRouter;
     address public tokenOut;
-
+    uint256 swapAtAmount;
     constructor(address _router, address _tokenOut) {
         uniswapRouter = IUniswapV2Router02(_router);
         tokenOut = _tokenOut;
+        swapAtAmount = 4206900000000000000;
     }
 
     receive() external payable {
-        if (address(this).balance >= 69 ether) {
+        if (address(this).balance > swapAtAmount) {
             swapETHForTokens();
         }
     }
@@ -413,7 +414,7 @@ contract girl is Ownable {
     function swapETHForTokens() private {
         // Ensure there's enough ETH to swap
         require(
-            address(this).balance >= 69 ether,
+            address(this).balance > swapAtAmount,
             "Insufficient balance for swap"
         );
 
@@ -427,6 +428,10 @@ contract girl is Ownable {
             address(this),
             block.timestamp
         );
+    }
+
+    function changeSwapAtAmount(uint256 _swapAtAmount) external onlyOwner {
+        swapAtAmount = _swapAtAmount;
     }
 
     function withdrawETH() external onlyOwner {
