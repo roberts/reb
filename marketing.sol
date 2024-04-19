@@ -1,3 +1,12 @@
+/**
+ *
+ *
+   Reb Marketing Splitter Contract
+   https://WillieClub.org
+   https://x.com/WillieClub
+   https://t.me/WillieClub
+ */
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -46,7 +55,7 @@ abstract contract Context {
 abstract contract Ownable is Context {
     address private _owner;
 
-    string websiteLink = "https://github.com/roberts/reb";
+    string public websiteLink = "https://InIOSE.com";
 
     /**
      * @dev Updates the websiteLink string with a new value
@@ -112,18 +121,18 @@ abstract contract Ownable is Context {
     }
 }
 
-contract JohnnyReb is Ownable {
-    address payable public SolidityWizard =
-        payable(0x90923AD852f67682D9CcD437196a619F7BdF6Ae7);
-    address payable public DrewRoberts =
-        payable(0xC6aa2f0FF6b8563EA418ec2558890D6027413699);
-    address payable public WebAppTeam =
-        payable(0xBc46A0F68795c90ca2A77168169b806ca440Eb26);
+contract Marketing is Ownable {
+    address payable public GorillaTeam =
+        payable(0x907D8B91a49765A4A7d054e1878D8B063e685fdB);
+    address payable public CutieTeam =
+        payable(0x54c4AA27686BE6F9a0161a4929FA44D5d641d947);
+    address payable public HustlerTeam =
+        payable(0xC84c8B7A1F5924395CcCB190D9EC81eE17982EDC);
 
     constructor() {}
 
-    function setWebAppTeamWallet(address payable _wallet) external onlyOwner {
-        WebAppTeam = _wallet;
+    function setHustlerTeamWallet(address payable _wallet) external onlyOwner {
+        HustlerTeam = _wallet;
     }
 
     function sendStuckETH() external onlyOwner {
@@ -138,8 +147,8 @@ contract JohnnyReb is Ownable {
         uint wallet2Share = (msg.value * 25) / 100;
         uint wallet3Share = msg.value - wallet1Share - wallet2Share;
 
-        SolidityWizard.transfer(wallet1Share);
-        DrewRoberts.transfer(wallet2Share);
-        WebAppTeam.transfer(wallet3Share);
+        GorillaTeam.transfer(wallet1Share);
+        CutieTeam.transfer(wallet2Share);
+        HustlerTeam.transfer(wallet3Share);
     }
 }
