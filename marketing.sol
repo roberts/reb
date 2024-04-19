@@ -131,8 +131,16 @@ contract Marketing is Ownable {
 
     constructor() {}
 
+    function setGorillaTeamWallet(address payable _wallet) external onlyOwner {
+        GorillaTeam = _gorillaWallet;
+    }
+
+    function setCutieTeamWallet(address payable _wallet) external onlyOwner {
+        CutieTeam = _cutieWallet;
+    }
+
     function setHustlerTeamWallet(address payable _wallet) external onlyOwner {
-        HustlerTeam = _wallet;
+        HustlerTeam = _hustlerWallet;
     }
 
     function sendStuckETH() external onlyOwner {
