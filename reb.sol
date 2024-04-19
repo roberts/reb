@@ -1,3 +1,12 @@
+/**
+ *
+ *
+   Reb Developer Splitter Contract
+   https://WillieClub.org
+   https://x.com/WillieClub
+   https://t.me/WillieClub
+ */
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
